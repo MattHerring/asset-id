@@ -20,7 +20,7 @@ std::optional<digit> digit::from_int(value_t integer_value)
         return std::nullopt;
     }
 
-    return digit(integer_value);
+    return digit{integer_value};
 }
 
 std::optional<digit> digit::from_char(char const character)
@@ -32,7 +32,7 @@ std::optional<digit> digit::from_char(char const character)
         return std::nullopt;
     }
 
-    return digit(static_cast<std::uint8_t>(character - '0'));
+    return digit{static_cast<std::uint8_t>(character - '0')};
 }
 
 } // namespace asset_id

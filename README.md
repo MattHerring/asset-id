@@ -113,6 +113,7 @@ For ease of running here are the commands to call them:
 # is necessary).
 chmod -wx test_scenarios/non_writable_dest_dir/destination/
 ./build/src/asset_id ./test_scenarios/non_writable_dest_dir/data.txt ./test_scenarios/non_writable_dest_dir/destination/
+chmod +wx test_scenarios/non_writable_dest_dir/destination/
 ```
 
 
