@@ -20,7 +20,7 @@ bool write_as_png(checked_asset_id_t const& asset_id, std::filesystem::path cons
         return false;
     }
 
-    constexpr auto const image_line_start_byte = 1U;
+    auto const image_line_start_byte = 1U;
 
     auto pixels = create_image_line(asset_id, image_line_start_byte);
     if (!pixels)
@@ -63,8 +63,8 @@ bool write_as_png(checked_asset_id_t const& asset_id, std::filesystem::path cons
             break;
         }
 
-        constexpr auto const colour_bit_depth = 1;
-        constexpr auto const image_line_height_pixels = 1;
+        auto const colour_bit_depth = 1;
+        auto const image_line_height_pixels = 1;
 
         png_init_io(write_struct, outfile);
         png_set_IHDR(
